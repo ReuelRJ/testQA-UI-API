@@ -1,0 +1,10 @@
+{
+    "user1": {
+        "user": "QA_teste1@g.globo",
+        "password": "hAIyh+@YsO21$MC"
+    },
+    "AmbienteLocal": "http://localhost:3000/",
+    "AmbienteDev": "https://script.dev.entretenimento.g.globo/",
+    "AmbienteQua": "",
+    "AmbienteProd": ""
+}

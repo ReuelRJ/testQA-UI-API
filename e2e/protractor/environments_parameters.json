@@ -1,0 +1,15 @@
+{
+  "local": {
+    "seleniumAddress": "http://localhost:4444/wd/hub",
+    "baseUrl": "https://google.com"
+    
+  },
+  "CI": {
+    "seleniumAddress": "http://zalenium.entretenimento.tvglobo.com.br/wd/hub",
+    "baseUrl": "https://script.dev.entretenimento.g.globo/auth"
+  }
+}
+
+
+
+

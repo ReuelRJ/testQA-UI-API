@@ -1,0 +1,38 @@
+image: docker:stable
+
+services:
+  - docker:dind
+
+stages:
+  - integration-test
+#  - e2e-test
+
+variables:
+  
+ 
+# test e2e:
+#  tags:
+#    - s3-runner
+#  stage: e2e-test
+#  script:
+#    - npm cache clean --force
+#    - node --version
+#    - npm --version
+#    - npm install --registry "https://registry.npmjs.org"
+#    - TEST_ENV='CI' TAG='@SmokeTest' ID=$S3_BUCKET_ID  SECRET=$S3_BUCKET_SECRET  npm run testui
+#  only:
+#    - release
+    
+integration test:
+  tags:
+    - s3-runner
+  stage: integration-test
+  script:
+    - npm cache clean --force
+    - node --version
+    - npm --version
+    - npm install --registry "https://registry.npmjs.org"
+    - npm run test  
+  allow_failure: true
+  only:
+    - master
